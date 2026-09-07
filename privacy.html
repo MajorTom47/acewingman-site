@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Ace Wingman</title>
+<meta name="description" content="How Ace Wingman collects, uses, and protects your information.">
+<style>
+  :root{
+    --paper:#F3EDE1; --card:#FBF8F2; --ink:#23201C; --ink2:#6B6659;
+    --ink3:#A39C8D; --line:#E3DAC8; --signal:#E6531B;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --paper:#17150F; --card:#201D16; --ink:#F3EDE1; --ink2:#BDB6A6;
+      --ink3:#8A8272; --line:#37322A; --signal:#FF6B35;
+    }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--paper); color:var(--ink2);
+    font:15px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",
+         "PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:740px;margin:0 auto;padding:0 22px 72px}
+  header{padding:40px 0 0}
+  .kicker{
+    font:600 10px/1.2 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    letter-spacing:3px;color:var(--ink3);text-transform:uppercase
+  }
+  h1{margin:10px 0 6px;font-size:26px;font-weight:800;letter-spacing:.5px;color:var(--ink);line-height:1.3}
+  .meta{
+    font:10.5px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    letter-spacing:.5px;color:var(--ink3);
+    padding-bottom:16px;border-bottom:1px solid var(--line)
+  }
+  .langbar{margin:18px 0 0;font-size:13px}
+  .langbar a{color:var(--signal);text-decoration:none;border-bottom:1px solid transparent}
+  .langbar a:hover{border-bottom-color:var(--signal)}
+  .langbar span{color:var(--ink3)}
+  .intro{margin-top:22px}
+  h2{
+    margin:34px 0 12px;font-size:17px;font-weight:700;
+    letter-spacing:.3px;color:var(--ink);line-height:1.4
+  }
+  h3{margin:20px 0 10px;font-size:14.5px;font-weight:700;color:var(--ink)}
+  p{margin:0 0 13px;text-align:justify}
+  /* 编号条款用 flex + align-items:baseline 做悬挂缩进。
+     不用 ::before + position:absolute —— 那样即使把 line-height 调成一致，
+     12px 计数器和 15px 正文的半行距仍不同，基线还是差 ~1px。
+     flex baseline 对齐是从根上解决，跟 App 内 LegalDoc.vue 同一套做法。 */
+  ol{margin:0 0 13px;padding:0;list-style:none;counter-reset:li}
+  ol li{
+    counter-increment:li;display:flex;align-items:baseline;
+    gap:10px;margin-bottom:13px
+  }
+  ol li::before{
+    content:counter(li) ".";flex:0 0 20px;
+    font:12px/1.75 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    color:var(--ink3)
+  }
+  ol li>span{flex:1;text-align:justify}
+  strong{color:var(--ink);font-weight:700}
+  a{color:var(--signal)}
+  footer{
+    margin-top:56px;padding-top:22px;border-top:1px solid var(--line);
+    text-align:center;
+    font:9.5px/1.8 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    letter-spacing:2px;text-transform:uppercase;color:var(--ink3)
+  }
+  footer a{color:var(--ink3)}
+  /* support page only */
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:20px 22px;margin:18px 0
+  }
+  .card h2{margin-top:0}
+  .big{font-size:17px;font-weight:700;color:var(--ink);word-break:break-all}
+  @media (max-width:520px){
+    h1{font-size:22px}
+    .wrap{padding:0 18px 56px}
+    /* 窄屏关掉两端对齐：一行放不下几个词时 justify 会把词间距拉得极夸张，
+       手机上读起来像"漏字"。左对齐 + 自然换行更好读。 */
+    p, ol li>span{text-align:left}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="kicker">PRIVACY POLICY</div>
+  <h1>Ace Wingman Privacy Policy</h1>
+  <div class="meta">EFFECTIVE SEPTEMBER 2026 · LAST UPDATED 2026.09.07</div>
+  <div class="langbar"><a href="index.html">Support</a> <span>·</span> <strong>English</strong> <span>·</span> <a href="zh/privacy.html">中文</a></div>
+</header>
+<div class="intro">
+  <p>Ace Wingman is a dating and texting coaching app for iOS, built and operated by an independent developer (&quot;we&quot;, &quot;us&quot;). This policy explains what information the app collects, why we collect it, who we share it with, and the choices you have.</p>
+  <p>Please read it before you use the app. If anything here is unclear, email us using the address in Section 11 — a real person reads that inbox.</p>
+  <p><strong>Please note: our servers are located outside the United States (see Section 5). If you use Ace Wingman from the U.S., your information will be transmitted to and stored on those servers.</strong></p>
+</div>
+<h2>1. Information We Collect</h2>
+<h3>(a) Information you give us</h3>
+<ol>
+  <li><span><strong>The questions and conversations you type in. These are sent to third-party AI providers (see Section 4) to generate a response</strong>, and stored so you can find them again in your history.</span></li>
+  <li><span><strong>Messages you paste from other people.</strong> The core way this app works is that you paste in a message someone sent you. <strong>That text is sent to third-party AI providers too.</strong> We recommend removing names, phone numbers, addresses, and anything else that identifies the other person before you paste. You are responsible for having the right to share what you paste. We do not analyze, extract, or separately store third-party identity information found in it.</span></li>
+  <li><span>A display name. We assign you a default one when you sign up; you can change it under Profile → Edit profile. We never pull your real name or photo from any third party.</span></li>
+</ol>
+<h3>(b) Information collected automatically</h3>
+<ol>
+  <li><span><strong>An Apple user identifier.</strong> When you use Sign in with Apple, Apple gives us an anonymous identifier that is unique to this app. <strong>We do not receive or store your email address, your real name, or your Apple ID.</strong></span></li>
+  <li><span><strong>An Apple authorization refresh token.</strong> Used for one purpose only: to revoke this app's Sign in with Apple authorization when you delete your account, as Apple requires (App Review Guideline 5.1.1(v)). It is not used for anything else.</span></li>
+  <li><span><strong>A device identifier.</strong> If you use the app as a guest without signing in, we generate an identifier from device information and keep it on your device, so your saved cards and history are still there when you reopen the app. It contains no name or contact information and is not shared with other apps.</span></li>
+  <li><span>Usage records: your question history, saved cards, quiz results, daily question count, and last active time. These maintain your account state, power the history feature, and enforce the free daily limit.</span></li>
+  <li><span><strong>Subscription receipts.</strong> When you purchase a membership, we receive and store the transaction identifier, product identifier, subscription status, and expiration date from Apple, in order to confirm your membership. <strong>We never see or store your payment method, card number, or billing address</strong> — Apple handles all of that.</span></li>
+</ol>
+<h2>2. How We Use Your Information</h2>
+<p>We use your information only as needed to run the product:</p>
+<ol>
+  <li><span>To identify your account and attach your data to it.</span></li>
+  <li><span>To generate AI responses to the questions you ask.</span></li>
+  <li><span>To store your conversations, saved cards, and history in the cloud so you can return to them.</span></li>
+  <li><span>To confirm your subscription status and enforce free-tier limits and member benefits.</span></li>
+  <li><span>To troubleshoot problems, guard against abuse, and improve the product.</span></li>
+</ol>
+<p><strong>We do not use your personal information for advertising. We do not sell your personal information. We do not share it with third parties for their own marketing purposes.</strong></p>
+<p>If we ever need to use your information for a purpose not described here, we will ask for your permission first.</p>
+<h2>3. Legal Bases and Your Consent</h2>
+<p>When you create an account, you check a box confirming that you accept these terms and this policy. <strong>That check is your consent to the processing described here, including sending what you type to third-party AI providers.</strong></p>
+<p>You can withdraw that consent at any time by deleting your account (Section 7) or by uninstalling the app. Withdrawing consent does not affect processing that already happened.</p>
+<h2>4. Third-Party Services</h2>
+<p>To deliver core features, we use the following categories of third-party service. We send each of them only the minimum data the feature requires:</p>
+<ol>
+  <li><span><strong>Third-party AI providers.</strong> The text you type is sent to a third-party AI service to generate a response. <strong>What we send does not include your account identifier, display name, or any other identity information.</strong> The specific providers we use may change as the product evolves, including the addition of providers located in other countries; material changes will be reflected in an update to this policy.</span></li>
+  <li><span><strong>A cloud infrastructure provider.</strong> Supplies the database, serverless functions, and file storage this app runs on. Your data is stored with this provider.</span></li>
+  <li><span><strong>Apple Inc.</strong> Provides Sign in with Apple authentication and validates in-app purchases. We send Apple a subscription transaction identifier to verify your membership; your payment information goes to Apple directly and never passes through us.</span></li>
+</ol>
+<p><strong>We require each of these providers to protect your information to a standard no lower than the one described in this policy, and to process it only for the purposes stated here.</strong></p>
+<p>Apart from the above, and apart from disclosures required by law or valid legal process, we do not share, transfer, or publicly disclose your personal information to anyone.</p>
+<h2>5. Where Your Information Is Stored</h2>
+<ol>
+  <li><span><strong>Your information is stored on servers operated by our cloud infrastructure provider, located outside the United States.</strong></span></li>
+  <li><span><strong>If you use Ace Wingman from the United States or anywhere else, the questions you ask, your usage records, and your account information are transmitted to and processed on those servers.</strong> By using the app, you acknowledge and agree to this transfer. If you are not comfortable with that arrangement, please stop using the app; you can delete your data at any time under Section 7.</span></li>
+  <li><span>AI generation is performed by the providers described in Section 4. Only the text you type is sent to them, with no account identity attached. Where those providers are located outside the United States, your request is processed abroad.</span></li>
+  <li><span>Retention: we keep the information above while you use the app. When you delete a specific item, or delete your account, we delete the corresponding personal information or irreversibly anonymize it, except where law requires us to retain it.</span></li>
+</ol>
+<h2>6. How We Protect Your Information</h2>
+<ol>
+  <li><span>Data is partitioned by account identifier. Database permissions are configured so that only server-side cloud functions can write, and by default only you can read your own data.</span></li>
+  <li><span>Data in transit is encrypted over HTTPS. Data at rest is protected by our cloud provider's security controls.</span></li>
+  <li><span>Access is tightly restricted. Engineering access to production data happens only for necessary troubleshooting, against redacted logs.</span></li>
+  <li><span>If a personal data breach occurs, we will notify affected users of the nature of the incident, its likely consequences, and the steps we have taken, as required by applicable law.</span></li>
+</ol>
+<h2>7. Your Privacy Rights</h2>
+<p>Wherever you live, you can do all of the following:</p>
+<ol>
+  <li><span><strong>Access.</strong> View your question history and saved cards inside the app at any time.</span></li>
+  <li><span><strong>Delete individual items.</strong> Remove any history entry or saved card from its page.</span></li>
+  <li><span><strong>Delete your account and all data.</strong> Go to <strong>Profile → Delete account</strong>. <strong>This is self-service — you do not need to contact us.</strong> It permanently deletes your account record, question history, saved cards, and quiz results, and revokes this app's Sign in with Apple authorization. It cannot be undone.</span></li>
+  <li><span><strong>Revoke Apple authorization separately.</strong> You can also disable this app's Sign in with Apple access at any time under iOS Settings → Apple Account → Sign in with Apple.</span></li>
+  <li><span><strong>Get a copy, or complain.</strong> To export a copy of your data, or if you disagree with how we handle your information, email us at the address in Section 11. We respond within 15 business days.</span></li>
+</ol>
+<h3>California residents (CCPA / CPRA)</h3>
+<p>If you are a California resident, you have the right to know what personal information we collect and how we use it, to request deletion or correction of it, to opt out of its sale or sharing, and to limit the use of sensitive personal information. <strong>We do not sell or share personal information as those terms are defined by the CCPA, and we do not use sensitive personal information for any purpose beyond delivering the service you asked for.</strong> We will never discriminate against you for exercising any of these rights. Sections 1 through 5 describe every category of personal information we collect, the sources, the purposes, and the categories of third parties we disclose it to. You may exercise these rights through the in-app controls above or by emailing us.</p>
+<p>Deleting your account does not cancel your subscription. Subscriptions are managed by Apple — cancel separately under iOS Settings → Apple Account → Subscriptions. See Section 5 of the Terms of Service.</p>
+<h2>8. Children's Privacy</h2>
+<p>Ace Wingman is for adults and is not directed to anyone under 18. <strong>If you are under 18, please stop using this app.</strong> We do not knowingly collect personal information from children. If we learn that we have collected personal information from a child under 13 without verifiable parental consent, as defined by the Children's Online Privacy Protection Act, we will delete it promptly. If you believe a child has provided us with personal information, contact us using Section 11.</p>
+<h2>9. Do Not Track</h2>
+<p>Ace Wingman does not track you across other companies' apps or websites, and does not use the App Tracking Transparency framework to request tracking permission, because we do not track. We therefore do not respond to browser Do Not Track signals — there is nothing for them to turn off.</p>
+<h2>10. Changes to This Policy</h2>
+<p>We may update this policy when the law changes or the product changes. The current version always lives on this page, and we will note the effective date at the top. For material changes, we will tell you inside the app before they take effect. Continuing to use Ace Wingman after an update means you accept the updated policy.</p>
+<h2>11. Contact Us</h2>
+<p>Questions, requests, or complaints about this policy or how we handle your information:</p>
+<ol>
+  <li><span>Email: enzosun94@gmail.com (fastest route — this reaches the developer directly)</span></li>
+  <li><span>Any other contact method listed on the app's Profile → About page.</span></li>
+</ol>
+<p>We reply within 15 business days of receiving your request.</p>
+<footer>
+  — Ace Wingman —<br>
+  <a href="mailto:enzosun94@gmail.com">enzosun94@gmail.com</a>
+</footer>
+</div>
+</body>
+</html>

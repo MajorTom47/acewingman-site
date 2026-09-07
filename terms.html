@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of Service — Ace Wingman</title>
+<meta name="description" content="The agreement between you and Ace Wingman.">
+<style>
+  :root{
+    --paper:#F3EDE1; --card:#FBF8F2; --ink:#23201C; --ink2:#6B6659;
+    --ink3:#A39C8D; --line:#E3DAC8; --signal:#E6531B;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --paper:#17150F; --card:#201D16; --ink:#F3EDE1; --ink2:#BDB6A6;
+      --ink3:#8A8272; --line:#37322A; --signal:#FF6B35;
+    }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--paper); color:var(--ink2);
+    font:15px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",
+         "PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:740px;margin:0 auto;padding:0 22px 72px}
+  header{padding:40px 0 0}
+  .kicker{
+    font:600 10px/1.2 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    letter-spacing:3px;color:var(--ink3);text-transform:uppercase
+  }
+  h1{margin:10px 0 6px;font-size:26px;font-weight:800;letter-spacing:.5px;color:var(--ink);line-height:1.3}
+  .meta{
+    font:10.5px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    letter-spacing:.5px;color:var(--ink3);
+    padding-bottom:16px;border-bottom:1px solid var(--line)
+  }
+  .langbar{margin:18px 0 0;font-size:13px}
+  .langbar a{color:var(--signal);text-decoration:none;border-bottom:1px solid transparent}
+  .langbar a:hover{border-bottom-color:var(--signal)}
+  .langbar span{color:var(--ink3)}
+  .intro{margin-top:22px}
+  h2{
+    margin:34px 0 12px;font-size:17px;font-weight:700;
+    letter-spacing:.3px;color:var(--ink);line-height:1.4
+  }
+  h3{margin:20px 0 10px;font-size:14.5px;font-weight:700;color:var(--ink)}
+  p{margin:0 0 13px;text-align:justify}
+  /* 编号条款用 flex + align-items:baseline 做悬挂缩进。
+     不用 ::before + position:absolute —— 那样即使把 line-height 调成一致，
+     12px 计数器和 15px 正文的半行距仍不同，基线还是差 ~1px。
+     flex baseline 对齐是从根上解决，跟 App 内 LegalDoc.vue 同一套做法。 */
+  ol{margin:0 0 13px;padding:0;list-style:none;counter-reset:li}
+  ol li{
+    counter-increment:li;display:flex;align-items:baseline;
+    gap:10px;margin-bottom:13px
+  }
+  ol li::before{
+    content:counter(li) ".";flex:0 0 20px;
+    font:12px/1.75 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    color:var(--ink3)
+  }
+  ol li>span{flex:1;text-align:justify}
+  strong{color:var(--ink);font-weight:700}
+  a{color:var(--signal)}
+  footer{
+    margin-top:56px;padding-top:22px;border-top:1px solid var(--line);
+    text-align:center;
+    font:9.5px/1.8 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    letter-spacing:2px;text-transform:uppercase;color:var(--ink3)
+  }
+  footer a{color:var(--ink3)}
+  /* support page only */
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:20px 22px;margin:18px 0
+  }
+  .card h2{margin-top:0}
+  .big{font-size:17px;font-weight:700;color:var(--ink);word-break:break-all}
+  @media (max-width:520px){
+    h1{font-size:22px}
+    .wrap{padding:0 18px 56px}
+    /* 窄屏关掉两端对齐：一行放不下几个词时 justify 会把词间距拉得极夸张，
+       手机上读起来像"漏字"。左对齐 + 自然换行更好读。 */
+    p, ol li>span{text-align:left}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="kicker">TERMS OF SERVICE</div>
+  <h1>Ace Wingman Terms of Service</h1>
+  <div class="meta">EFFECTIVE SEPTEMBER 2026 · LAST UPDATED 2026.09.07</div>
+  <div class="langbar"><a href="index.html">Support</a> <span>·</span> <strong>English</strong> <span>·</span> <a href="zh/terms.html">中文</a></div>
+</header>
+<div class="intro">
+  <p>These Terms of Service (&quot;Terms&quot;) are the agreement between you and the independent developer of Ace Wingman (&quot;we&quot;, &quot;us&quot;) covering your use of the Ace Wingman iOS app.</p>
+  <p><strong>By checking the box at sign-in, or by using the app, you agree to these Terms and to our Privacy Policy. If you do not agree, please do not use Ace Wingman.</strong></p>
+</div>
+<h2>1. Who Can Use Ace Wingman</h2>
+<p><strong>You must be at least 18 years old to use this app.</strong> By using it you represent that you are 18 or older and that you have the legal capacity to enter into these Terms. If you are under 18, stop using the app now.</p>
+<h2>2. What Ace Wingman Is — and Isn't</h2>
+<ol>
+  <li><span>Ace Wingman is an AI-assisted dating and texting coaching app. Its features include AI question-and-answer, a library of strategy cards, a practice quiz, saved cards, and question history.</span></li>
+  <li><span><strong>Everything the AI produces is for general informational purposes only. It is not professional relationship counseling, therapy, psychological advice, legal advice, or any other kind of professional service.</strong> When something in your life genuinely matters, use your own judgment, and consult a qualified professional where appropriate.</span></li>
+  <li><span>We coach clear, honest communication. <strong>We do not provide, and the app is not intended to support, manipulation, coercion, harassment, stalking, or any attempt to pressure another person into anything they have declined.</strong></span></li>
+</ol>
+<h2>3. Your Account</h2>
+<ol>
+  <li><span>You can browse as a guest. Signing in with Apple ties your data to an account so it follows you across devices and reinstalls.</span></li>
+  <li><span>You are responsible for activity that happens under your account. If you believe someone else has accessed it, contact us.</span></li>
+  <li><span>You can delete your account at any time under Profile → Delete account. This is permanent — see Section 7 of the Privacy Policy for exactly what gets deleted.</span></li>
+</ol>
+<h2>4. Acceptable Use</h2>
+<p>When you use Ace Wingman, you agree not to:</p>
+<ol>
+  <li><span>Use it to harass, threaten, stalk, defame, or impersonate anyone.</span></li>
+  <li><span>Use it to pressure, manipulate, or coerce another person, including attempting to talk someone past a boundary they have already stated.</span></li>
+  <li><span>Paste in content you have no right to share, or content that violates someone else's privacy or legal rights.</span></li>
+  <li><span>Attempt to reverse engineer, decompile, scrape, or extract the app's content library, or resell or redistribute that content.</span></li>
+  <li><span>Attempt to bypass usage limits, subscription checks, rate limiting, or any other technical control.</span></li>
+  <li><span>Use the app for anything illegal, or in any way that interferes with its operation or other users.</span></li>
+</ol>
+<p>We may suspend or terminate access for violations of this section.</p>
+<h2>5. Subscriptions, Billing, and Cancellation</h2>
+<p>Ace Wingman offers auto-renewing subscriptions. The following terms are required by Apple and apply to every purchase:</p>
+<ol>
+  <li><span><strong>Payment is charged to your Apple Account at confirmation of purchase.</strong></span></li>
+  <li><span><strong>Your subscription renews automatically unless auto-renew is turned off at least 24 hours before the end of the current period. Apple charges your account for renewal within 24 hours prior to the end of the current period.</strong> The renewal price and period are shown on the purchase screen before you buy.</span></li>
+  <li><span><strong>You can manage or cancel your subscription at any time in iOS Settings → Apple Account → Subscriptions.</strong> Cancelling stops future renewals; your current period continues until it expires.</span></li>
+  <li><span>Free-tier users receive a limited number of AI questions per day, which resets daily. Members receive an expanded daily allowance subject to fair-use limits, which are described in the app.</span></li>
+  <li><span><strong>All purchases are processed by Apple. Refunds are handled by Apple under its own policies, not by us.</strong> To request a refund, use Apple's &quot;Report a Problem&quot; flow. We cannot issue refunds directly.</span></li>
+  <li><span>If you delete your account, your subscription is not automatically cancelled — it is managed by Apple and must be cancelled separately.</span></li>
+</ol>
+<h2>6. AI-Generated Content</h2>
+<ol>
+  <li><span><strong>Content generated by the AI is produced automatically by an algorithmic model. It may be wrong, inaccurate, incomplete, or a poor fit for your specific situation. You decide whether to act on it, and you are responsible for the consequences of doing so.</strong></span></li>
+  <li><span>The text you type — including messages you paste from other people — is sent to third-party AI providers for processing, as described in the Privacy Policy. Do not paste in information you are not comfortable sharing.</span></li>
+  <li><span>We do not guarantee any particular outcome. No app can promise you a reply, a date, or a relationship, and we do not.</span></li>
+</ol>
+<h2>7. Content and Intellectual Property</h2>
+<ol>
+  <li><span>The app, its strategy card library, quiz bank, interface, and branding are ours and are protected by intellectual property law. You get a personal, non-transferable, non-exclusive license to use them inside the app. <strong>You may not copy, redistribute, resell, or build a competing product from them.</strong></span></li>
+  <li><span>The text you enter remains yours. You grant us the limited license needed to operate the service: to transmit it to AI providers for processing, and to store it so you can retrieve it later.</span></li>
+  <li><span>We do not use your conversations to train AI models.</span></li>
+</ol>
+<h2>8. Disclaimers</h2>
+<p><strong>The app is provided &quot;as is&quot; and &quot;as available&quot;, without warranties of any kind, express or implied, including any implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</strong> We do not warrant that the app will be uninterrupted, error-free, or that any defect will be corrected.</p>
+<p>We are not responsible for service interruptions or data loss caused by events outside our control, including force majeure, app store or operating system policy changes, third-party service failures (including AI and cloud providers), or scheduled maintenance and upgrades, to the extent permitted by law.</p>
+<h2>9. Limitation of Liability</h2>
+<p><strong>To the maximum extent permitted by law, we will not be liable for any indirect, incidental, special, consequential, or punitive damages, or for any loss of profits, data, goodwill, or opportunity, arising out of or related to your use of the app.</strong></p>
+<p><strong>Our total liability for any claim relating to the app will not exceed the greater of (a) the amount you paid us in the twelve months before the claim arose, or (b) twenty U.S. dollars (US$20).</strong></p>
+<p>Some jurisdictions do not allow certain limitations of liability, so parts of this section may not apply to you.</p>
+<h2>10. Termination</h2>
+<p>You may stop using Ace Wingman at any time by deleting your account and removing the app. We may suspend or terminate your access if you materially violate these Terms, or if we are required to by law. Sections 6 through 9 and 11 survive termination.</p>
+<h2>11. Governing Law and Disputes</h2>
+<p>These Terms are governed by the laws of the State of California, United States, without regard to its conflict-of-laws rules. Any dispute arising out of or relating to these Terms or the app will be brought in the state or federal courts located in California, and you and we each consent to jurisdiction and venue there.</p>
+<p><strong>Nothing in this section removes any right you have under mandatory consumer-protection law in your place of residence, including your right to bring a claim in your local small-claims court.</strong></p>
+<p>Purchases made through the App Store are additionally subject to Apple's own terms. Where Apple's terms conflict with these Terms in relation to a purchase, Apple's terms control for that purchase.</p>
+<h2>12. Changes to These Terms</h2>
+<p>We may update these Terms as the product or the law changes. The current version always lives on this page with its effective date. For material changes we will notify you inside the app before they take effect. Continuing to use Ace Wingman after an update means you accept the updated Terms.</p>
+<h2>13. Contact Us</h2>
+<p>Questions about these Terms: <strong>enzosun94@gmail.com</strong>. A real person reads that inbox and will reply within 15 business days.</p>
+<footer>
+  — Ace Wingman —<br>
+  <a href="mailto:enzosun94@gmail.com">enzosun94@gmail.com</a>
+</footer>
+</div>
+</body>
+</html>
